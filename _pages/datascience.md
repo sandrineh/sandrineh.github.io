@@ -2,10 +2,17 @@
 layout: archive
 permalink: /data-science/
 title: "Data Science Posts"
-author_profile: true
+author_profile: false
 #header:
 #  image: #"/images/images"
 ---
+<!--{% include base_path %}
+{% include group-by-array collection=site.posts field="tags" %}
 
-
-Voici mes projets
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}-->
