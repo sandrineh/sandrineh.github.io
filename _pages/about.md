@@ -1,7 +1,7 @@
 ---
 title: "About"
 permalink : /about/
-header:
-  image: #"/images/etc"
+#header:
+#  image: #"/images/etc"
 ---
-Ici sera ma description
+Je me percectionne en machine learning, data analyse et data visualisation.
