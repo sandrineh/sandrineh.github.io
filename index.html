@@ -1,13 +1,38 @@
 ---
 layout: home
-author_profile: true
+author_profile: false
 header:
+  title: "Portfolio"
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/background.JPG
   actions:
-    - label: "View my C.V."
+    - label: "<i class='fas fa-download'></i>View my C.V."
       url: "https://novoresume.com/gb/a/eleonore.henry.1"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-  excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
+  caption: "Photo credit: [**sandrineh**]"
+excerpt: >
+  "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
+feature_row:
+  - image_path: /assets/images/mm-customizable-feature.png
+    alt: "customizable"
+    title: "Super customizable"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    url: "/docs/configuration/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/mm-responsive-feature.png
+    alt: "fully responsive"
+    title: "Responsive layouts"
+    excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
+    url: "/docs/layouts/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/mm-free-feature.png
+    alt: "100% free"
+    title: "100% free"
+    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
+    url: "/docs/license/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
+{% include feature_row %}
