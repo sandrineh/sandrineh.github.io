@@ -1,6 +1,6 @@
 # Site settings
 locale: "fr-FR"
-title: Sandrine Henry
+title: "Sandrine Henry"
 email: eleonore.henry@gmail.com
 description: Data Science Portfolio
 baseurl: "/dimension-jekyll-theme" # the subpath of your site, e.g. /blog
