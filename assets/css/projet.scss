@@ -31,7 +31,7 @@
 
 	//@import 'base/reset';
 	@import 'base/page';
-	@import 'base/typography';
+	//@import 'base/typography';
 
 // Component.
 
@@ -54,453 +54,154 @@
 //	@import 'layout/footer';
 
 
-	/* Main */
+/* Type */
 
-		#main {
-			@include vendor('flex-grow', '1');
-			@include vendor('flex-shrink', '1');
-			@include vendor('display', 'flex');
-			@include vendor('align-items', 'center');
-			@include vendor('justify-content', 'center');
-			@include vendor('flex-direction', 'column');
-			position: relative;
-			max-width: 100%;
-			z-index: 3;
+	html {
+		//font-size: 16pt;
 
-			article {
-				@include vendor('transform', 'translateY(0.25rem)');
-				@include vendor('transition', (
-					'opacity #{_duration(article)} ease-in-out',
-					'transform #{_duration(article)} ease-in-out'
-				));
-				@include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
-				position: relative;
-				width: 40rem;
-				max-width: 100%;
-				background-color: transparentize(_palette(bg), 0.15);
-				border-radius: _size(border-radius);
-				opacity: 0;
-
-				&.active {
-					@include vendor('transform', 'translateY(0)');
-					opacity: 1;
-				}
-
-				.close {
-					display: block;
-					position: absolute;
-					top: 0;
-					right: 0;
-					width: 4rem;
-					height: 4rem;
-					cursor: pointer;
-					text-indent: 4rem;
-					overflow: hidden;
-					white-space: nowrap;
-
-					&:before {
-						@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-						content: '';
-						display: block;
-						position: absolute;
-						top: 0.75rem;
-						left: 0.75rem;
-						width: 2.5rem;
-						height: 2.5rem;
-						border-radius: 100%;
-						background-position: center;
-						background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="2" y1="2" x2="18" y2="18" /><line x1="18" y1="2" x2="2" y2="18" /></svg>');
-						background-size: 20px 20px;
-						background-repeat: no-repeat;
-					}
-
-					&:hover {
-						&:before {
-							background-color: _palette(border-bg);
-						}
-					}
-
-					&:active {
-						&:before {
-							background-color: _palette(border-bg-alt);
-						}
-					}
-				}
-			}
-
-			@include breakpoint('<=small') {
-				article {
-					@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
-
-					.close {
-						&:before {
-							top: 0.875rem;
-							left: 0.875rem;
-							width: 2.25rem;
-							height: 2.25rem;
-							background-size: 14px 14px;
-						}
-					}
-				}
-			}
-
-			@include breakpoint('<=xsmall') {
-				article {
-					@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
-				}
-			}
+		@include breakpoint('<=xlarge') {
+			font-size: 12pt;
 		}
 
-		/* BG */
+		@include breakpoint('<=small') {
+			font-size: 11pt;
+		}
 
-			#bg {
-				@include vendor('transform', 'scale(1.0)');
-				-webkit-backface-visibility: hidden;
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100vh;
-				z-index: 1;
+		@include breakpoint('<=xxsmall') {
+			font-size: 10pt;
+		}
+	}
 
-				&:before, &:after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-				}
+	body, input, select, textarea {
+		color: _palette(fg);
+		font-family: _font(family);
+		font-weight: _font(weight);
+		font-size: 1rem;
+		line-height: 1.65;
+	}
 
-				&:before {
-					@include vendor('transition', 'background-color #{_duration(bg)} ease-in-out');
-					@include vendor('transition-delay', '#{_duration(intro)}');
-					background-image:		linear-gradient(to top, #{_palette(bg-overlay)}, #{_palette(bg-overlay)}),
-											url('../../assets/images/overlay.png');
-					background-size:		auto,
-											256px 256px;
-					background-position:	center,
-											center;
-					background-repeat:		no-repeat,
-											repeat;
-					z-index: 2;
-				}
+	a {
+		@include vendor('transition', (
+			'color #{_duration(transition)} ease-in-out',
+			'background-color #{_duration(transition)} ease-in-out',
+			'border-bottom-color #{_duration(transition)} ease-in-out'
+		));
+		border-bottom: dotted 1px _palette(fg-light);
+		text-decoration: none;
+		color: inherit;
 
-				&:after {
-					@include vendor('transform', 'scale(1.125)');
-					@include vendor('transition', (
-						'transform #{_duration(article)} ease-in-out',
-						'filter #{_duration(article)} ease-in-out'
-					));
-					background-image:		url('../../assets/images/bg.jpg');
-					background-position:	center;
-					background-size:		cover;
-					background-repeat:		no-repeat;
-					z-index: 1;
-				}
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
 
-				body.is-article-visible & {
-					&:after {
-						@include vendor('transform', 'scale(1.0825)');
-						@include vendor('filter', 'blur(0.2rem)');
-					}
-				}
+	strong, b {
+		color: _palette(fg-bold);
+		font-weight: _font(weight-bold);
+	}
 
-				body.is-preload & {
-					&:before {
-						background-color: _palette(bg-alt);
-					}
-				}
-			}
-			/* Header */
+	em, i {
+		font-style: italic;
+	}
 
-				#header {
-					@include vendor('display', 'flex');
-					@include vendor('flex-direction', 'column');
-					@include vendor('align-items', 'center');
-					@include vendor('transition', (
-						'transform #{_duration(article)} ease-in-out',
-						'filter #{_duration(article)} ease-in-out',
-						'opacity #{_duration(article)} ease-in-out',
-					));
-					background-image: -moz-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-					background-image: -webkit-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-					background-image: -ms-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-					background-image: radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-					max-width: 100%;
-					text-align: center;
+	p {
+		margin: 0 0 _size(element-margin) 0;
+	}
 
-					> * {
-						@include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
-						position: relative;
-						margin-top: 3.5rem;
+	h1, h2, h3, h4, h5, h6 {
+		color: _palette(fg-bold);
+		font-weight: _font(weight-bold);
+		line-height: 1.5;
+		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		text-transform: uppercase;
+		letter-spacing: _font(letter-spacing);
 
-						&:before {
-							content: '';
-							display: block;
-							position: absolute;
-							top: calc(-3.5rem - 1px);
-							left: calc(50% - #{_size(border-width) * 1});
-							width: _size(border-width);
-							height: calc(3.5rem + 1px);
-							background: _palette(border);
-						}
-					}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 
-					> :first-child {
-						margin-top: 0;
+		&.major {
+			border-bottom: solid _size(border-width) _palette(border);
+			width: -moz-max-content;
+			width: -webkit-max-content;
+			width: -ms-max-content;
+			width: max-content;
+			padding-bottom: 0.5rem;
+			margin: 0 0 (_size(element-margin) * 1) 0;
+		}
+	}
 
-						&:before {
-							display: none;
-						}
-					}
 
-					.logo {
-						width: 5.5rem;
-						height: 5.5rem;
-						line-height: 5.5rem;
-						border: solid _size(border-width) _palette(border);
-						border-radius: 100%;
 
-						.icon {
-							&:before {
-								font-size: 2rem;
-							}
-						}
-					}
+	@include breakpoint('<=small') {
+		h1 {
+			font-size: 1.75rem;
+			line-height: 1.4;
+		}
 
-					.content {
-						border-style: solid;
-						border-color: _palette(border);
-						border-top-width: _size(border-width);
-						border-bottom-width: _size(border-width);
-						max-width: 100%;
+		h2 {
+			font-size: 1.25em;
+			line-height: 1.5;
+		}
+	}
 
-						.inner {
-							@include vendor('transition', (
-								'max-height #{_duration(intro)} ease',
-								'padding #{_duration(intro)} ease',
-								'opacity #{_duration(article)} ease-in-out'
-							));
-							@include vendor('transition-delay', '0.25s');
-							padding: 3rem 2rem;
-							max-height: 40rem;
-							overflow: hidden;
+	sub {
+		font-size: 0.8rem;
+		position: relative;
+		top: 0.5rem;
+	}
 
-							> :last-child {
-								margin-bottom: 0;
-							}
-						}
+	sup {
+		font-size: 0.8rem;
+		position: relative;
+		top: -0.5rem;
+	}
 
-						p {
-							text-transform: uppercase;
-							letter-spacing: _font(letter-spacing);
-							font-size: 0.8rem;
-							line-height: 2;
-						}
-					}
+	blockquote {
+		border-left: solid (_size(border-width) * 4) _palette(border);
+		font-style: italic;
+		margin: 0 0 _size(element-margin) 0;
+		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	}
 
-					nav {
-						ul {
-							@include vendor('display', 'flex');
-							margin-bottom: 0;
-							list-style: none;
-							padding-left: 0;
-							border: solid _size(border-width) _palette(border);
-							border-radius: _size(border-radius);
+	code {
+		background: _palette(border-bg);
+		border-radius: _size(border-radius);
+		font-family: _font(family-fixed);
+		font-size: 0.9rem;
+		margin: 0 0.25rem;
+		padding: 0.25rem 0.65rem;
+	}
 
-							li {
-								padding-left: 0;
-								border-left: solid _size(border-width) _palette(border);
+	pre {
+		-webkit-overflow-scrolling: touch;
+		font-family: _font(family-fixed);
+		font-size: 0.9rem;
+		margin: 0 0 _size(element-margin) 0;
 
-								&:first-child {
-									border-left: 0;
-								}
+		code {
+			display: block;
+			line-height: 1.75;
+			padding: 1rem 1.5rem;
+			overflow-x: auto;
+		}
+	}
 
-								a {
-									display: block;
-									min-width: 7.5rem;
-									height: 2.75rem;
-									line-height: 2.75rem;
-									padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
-									text-transform: uppercase;
-									letter-spacing: _font(letter-spacing);
-									font-size: 0.8rem;
-									border-bottom: 0;
+	hr {
+		border: 0;
+		border-bottom: solid _size(border-width) _palette(border);
+		margin: (_size(element-margin) * 1.375) 0;
+	}
 
-									&:hover {
-										background-color: _palette(border-bg);
-									}
+	.align-left {
+		text-align: left;
+	}
 
-									&:active {
-										background-color: _palette(border-bg-alt);
-									}
-								}
-							}
-						}
+	.align-center {
+		text-align: center;
+	}
 
-						&.use-middle {
-							&:after {
-								content: '';
-								display: block;
-								position: absolute;
-								top: 0;
-								left: calc(50% - #{_size(border-width) * 1});
-								width: _size(border-width);
-								height: 100%;
-								background: _palette(border);
-							}
-
-							ul {
-								li {
-									&.is-middle {
-										border-left: 0;
-									}
-								}
-							}
-						}
-					}
-
-					body.is-article-visible & {
-						@include vendor('transform', 'scale(0.95)');
-						@include vendor('filter', 'blur(0.1rem)');
-						opacity: 0;
-					}
-
-					body.is-preload & {
-						> * {
-							opacity: 0;
-						}
-
-						@include vendor('filter', 'blur(0.125rem)');
-
-						.content {
-							.inner {
-								max-height: 0;
-								padding-top: 0;
-								padding-bottom: 0;
-								opacity: 0;
-							}
-						}
-					}
-
-					@include breakpoint('<=medium') {
-						.content {
-							p {
-								br {
-									display: none;
-								}
-							}
-						}
-					}
-
-					@include breakpoint('<=small') {
-						> * {
-							margin-top: 2rem;
-
-							&:before {
-								top: calc(-2rem - 1px);
-								height: calc(2rem + 1px);
-							}
-						}
-
-						.logo {
-							width: 4.75rem;
-							height: 4.75rem;
-							line-height: 4.75rem;
-
-							.icon {
-								&:before {
-									font-size: 1.75rem;
-								}
-							}
-						}
-
-						.content {
-							.inner {
-								padding: 2.5rem 1rem;
-							}
-
-							p {
-								line-height: 1.875;
-							}
-						}
-					}
-
-					@include breakpoint('<=xsmall') {
-						padding: 1.5rem 0;
-
-						.content {
-							.inner {
-								padding: 2.5rem 0;
-							}
-						}
-
-						nav {
-							ul {
-								@include vendor('flex-direction', 'column');
-								min-width: 10rem;
-								max-width: 100%;
-
-								li {
-									border-left: 0;
-									border-top: solid _size(border-width) _palette(border);
-
-									&:first-child {
-										border-top: 0;
-									}
-
-									a {
-										height: 3rem;
-										line-height: 3rem;
-										min-width: 0;
-										width: 100%;
-									}
-								}
-							}
-
-							&.use-middle {
-								&:after {
-									display: none;
-								}
-							}
-						}
-					}
-				}
-				/* Basic */
-
-					// MSIE: Required for IEMobile.
-						@-ms-viewport {
-							width: device-width;
-						}
-
-					// Ensures page width is always >=320px.
-						@include breakpoint('<=xsmall') {
-							html, body {
-								min-width: 320px;
-							}
-						}
-
-					// Set box model to border-box.
-					// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
-						html {
-							box-sizing: border-box;
-						}
-
-						*, *:before, *:after {
-							box-sizing: inherit;
-						}
-
-					body {
-						//background: _palette(bg);
-
-						// Stops initial animations until page loads.
-							&.is-preload {
-								*, *:before, *:after {
-									@include vendor('animation', 'none !important');
-									@include vendor('transition', 'none !important');
-								}
-							}
-
-					}
+	.align-right {
+		text-align: right;
+	}
