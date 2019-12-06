@@ -1,4 +1,8 @@
-# <center> <font face="Georgia, serif" color="#000" size=12px>Projet de WebScraping</font></center> 
+---
+title: Projet WebScraping
+image: pic01.jpg
+---
+# <center> <font face="Georgia, serif" color="#000" size=12px>Projet de WebScraping</font></center>
 
 <font face="Lucida Sans Unicode, Lucida Grande, sans-serif" size="3px">J'aime lire. Des livres,de la presse, des magazines. J'adore faire de la veille et j'apprécie par dessus tout partager mes trouvailles, faire de la <b>curation</b>. Grâce au web, on peut aujourd'hui accéder à des journaux, magazines etc... du monde entier qu'il était difficile de trouver en version papier.<br/>
 
@@ -11,7 +15,7 @@ Pour ce projet de Webscraping, J'ai choisi de scraper 2 sites de médias web : [
     </tr>
 </table><br/>
 <b>Objectif</b> : Créer un tableau qui, pour un mot donnée, rassemble les articles issus des pages de résultats de recherche de ces deux sites.<br/>
-<b>Le challenge</b> : réussir à uniformiser les résultats afin d'obtenir un tableau final contenant toutes les données.</font> 
+<b>Le challenge</b> : réussir à uniformiser les résultats afin d'obtenir un tableau final contenant toutes les données.</font>
 
 ### Import des librairies
 
@@ -67,7 +71,7 @@ def cleandf(a):
 
 dfcol=['titre','auteur']
 
-for col in dfcol: 
+for col in dfcol:
     df_lily[col]=list(map(cleandf, df_lily[col]))
 ```
 
@@ -87,11 +91,11 @@ df_lily['theme']=list(map(link,df_lily['theme']))
 
 
 ```python
-df_lily['link'] = df_lily['theme'].str.split('|').str[0] 
+df_lily['link'] = df_lily['theme'].str.split('|').str[0]
 df_lily['theme'] = df_lily['titre'].str.split('|').str[1]
-df_lily['titre'] = df_lily['titre'].str.split('|').str[2] 
-df_lily['accroche'] = df_lily['auteur'].str.split('|').str[0] 
-df_lily['date'] = df_lily['auteur'].str.split('|').str[2] 
+df_lily['titre'] = df_lily['titre'].str.split('|').str[2]
+df_lily['accroche'] = df_lily['auteur'].str.split('|').str[0]
+df_lily['date'] = df_lily['auteur'].str.split('|').str[2]
 df_lily['auteur'] = df_lily['auteur'].str.split('|').str[1]
 df_lily['source'] = 'The Lily'
 ```
