@@ -90,7 +90,7 @@
 		color: inherit;
 
 		&:hover {
-			border-bottom-color: transparent;
+			border-bottom-color: red;
 		}
 	}
 
@@ -348,7 +348,7 @@
 							border-bottom: 0;
 
 							&:hover {
-								background-color: red;
+								background-color: _palette(border-bg);
 							}
 
 							&:active {
