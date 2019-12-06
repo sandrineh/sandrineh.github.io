@@ -468,33 +468,39 @@
 						}
 					}
 				}
-				/* Wrapper */
+				/* Basic */
 
-					#wrapper {
-						@include vendor('display', 'flex');
-						@include vendor('flex-direction', 'column');
-						@include vendor('align-items', 'center');
-						@include vendor('justify-content', 'space-between');
-						position: relative;
-						min-height: 100vh;
-						width: 100%;
-						padding: 4rem 2rem;
-						z-index: 3;
-
-						&:before {
-							content: '';
-							display: block;
+					// MSIE: Required for IEMobile.
+						@-ms-viewport {
+							width: device-width;
 						}
 
-						@include breakpoint('<=xlarge') {
-							padding: 3rem 2rem;
-						}
-
-						@include breakpoint('<=small') {
-							padding: 2rem 1rem;
-						}
-
+					// Ensures page width is always >=320px.
 						@include breakpoint('<=xsmall') {
-							padding: 1rem;
+							html, body {
+								min-width: 320px;
+							}
 						}
+
+					// Set box model to border-box.
+					// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+						html {
+							box-sizing: border-box;
+						}
+
+						*, *:before, *:after {
+							box-sizing: inherit;
+						}
+
+					body {
+						background: _palette(bg);
+
+						// Stops initial animations until page loads.
+							&.is-preload {
+								*, *:before, *:after {
+									@include vendor('animation', 'none !important');
+									@include vendor('transition', 'none !important');
+								}
+							}
+
 					}
