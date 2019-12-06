@@ -13071,7 +13071,16 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
-{% include head.html %}
+
+<head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ '../assets/css/main.css' | relative_url }}" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ 'assets/css/ie9.css' | relative_url }}" /><![endif]-->
+    <noscript><link rel="stylesheet" href="{{ '../assets/css/noscript.css' | relative_url }}" /></noscript>
+</head>
+
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
