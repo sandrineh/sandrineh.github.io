@@ -1,6 +1,3 @@
-
-
-
 Actuellement analyste marketing, j'ai voulu ajouté une dose d'informatique à mon quotidien.
 C'est pourquoi j'ai décidé de suivre le Bootcamp Data analytics de chez Ironhack Paris.
 
