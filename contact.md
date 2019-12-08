@@ -24,7 +24,10 @@ title: contact
 </form>
 <ul class="icons">
 
-	{% if site.twitter_url %}
+				{% if site.linkedin_url %}
+				<li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				{% endif %}
+				{% if site.twitter_url %}
 				<li><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 				{% endif %}
 				{% if site.googleplus_url %}
@@ -47,9 +50,6 @@ title: contact
 				{% endif %}
 				{% if site.slack_url %}
 				<li><a href="{{ site.slack_url }}" class="icon fa-slack" target="_blank"><span class="label">Slack</span></a></li>
-				{% endif %}
-				{% if site.linkedin_url %}
-				<li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 				{% endif %}
 
 </ul>
