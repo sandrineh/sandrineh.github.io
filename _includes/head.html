@@ -5,4 +5,9 @@
     <link rel="stylesheet" href="{{ '../assets/css/main.css' | relative_url }}" />
     <!--[if lte IE 9]><link rel="stylesheet" href="{{ 'assets/css/ie9.css' | relative_url }}" /><![endif]-->
     <noscript><link rel="stylesheet" href="{{ '../assets/css/noscript.css' | relative_url }}" /></noscript>
+
+    <!--pour GA-->
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 </head>
