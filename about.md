@@ -12,6 +12,6 @@ Si aujourd’hui j'accompagne au quotidien les équipes édito et marketing dans
 <section>
 	<h3 class="major">Download my C.V.</h3>
 	<ul class="actions">
-		<li><a href="docs/Sandrine_Resume.pdf" class="button icon fa-download">C.V.</a></li>
+		<li><a href="docs/Sandrine_Resume.pdf" class="button icon fa-download" target="blank">C.V.</a></li>
 	</ul>
 </section>
