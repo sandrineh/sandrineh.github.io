@@ -16,7 +16,7 @@ image: pic02.jpg
 			</thead>
 			<tbody>
 				<tr>
-					<td>ML : Supervisé</td>
+					<td>Machine Learning: Apprentissage Supervisé</td>
 					<td> Description</td>
 					<td><a href="docs/supervised_learning project_nov19.pdf">Go</a></td>
 				</tr>
