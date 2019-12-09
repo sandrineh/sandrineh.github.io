@@ -40,28 +40,28 @@ image: pic02.jpg
 	</div>
 
   <h4>Autres</h4>
-	<div class="table-wrapper">
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Description</th>
-					<th> </th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Reach Read</td>
-					<td>Réalisation d’une base de données sur l’identité numérique des éditeurs et libraires et d’un site web dédié (HTML / CSS / PHP /SQL / Bootstrap)</td>
-					<td><a href="http://reachread.com/" target="blank">Go</a></td>
-				</tr>
-				<tr>
-					<td>Venice Bliss</td>
-					<td>Travail sur l'identité du groupe, les actions de communication pour la promotion des sorties clip et album, réalisation du site du groupe et refonte pour coller à l'identité adoptée. (Wordpress / HTML / CSS / PHP)</td>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reach Read</td>
+          <td>Réalisation d’une base de données sur l’identité numérique des éditeurs et libraires et d’un site web dédié (HTML / CSS / PHP /SQL / Bootstrap)</td>
+          <td><a href="http://reachread.com/" target="blank">Go</a></td>
+        </tr>
+        <tr>
+          <td>Venice Bliss</td>
+          <td>Travail sur l'identité du groupe, les actions de communication pour la promotion des sorties clip et album, réalisation du site du groupe et refonte pour coller à l'identité adoptée. (Wordpress / HTML / CSS / PHP)</td>
 					<td><a href="http://www.venicebliss.com/" target="blank">Go</a></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </section>
