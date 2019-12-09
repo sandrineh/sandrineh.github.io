@@ -13101,8 +13101,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Intro">Intro<a class="anchor-link" href="#Intro">&#182;</a></h1><p>Le dataset sur lequel j'ai travaillé provient du UCI Machine Learning Repository.<br/>
-<b>Source :</b> <a>https://archive.ics.uci.edu/ml/datasets/census+income</a>.<br/>
+<h1 class="projet" id="Intro">Intro<a class="anchor-link" href="#Intro">&#182;</a></h1><p>Le dataset sur lequel j'ai travaillé provient du UCI Machine Learning Repository.<br/>
+<b class="projet">Source :</b> <a>https://archive.ics.uci.edu/ml/datasets/census+income</a>.<br/>
 Les données du set proviennent du recensement de 1994 aux Etats-unis. L’objectif sera ici de prédire si le revenu d’un individu est de plus 50K$ ou pas (grâce à la variable « Income »). <br/>
 Comme il n'y a que 2 résultats possible, la méthode de ML sera celle de classification : régression logistic, SVM, forest tree etc…<br/>
 On pourra tester plusieurs de ces modèles pour déterminer le plus efficace.</p>
@@ -13133,7 +13133,7 @@ On pourra tester plusieurs de ces modèles pour déterminer le plus efficace.</p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Analyse-et-nettoyage-du-dataset">Analyse et nettoyage du dataset<a class="anchor-link" href="#Analyse-et-nettoyage-du-dataset">&#182;</a></h1><p>La première étape est d’analyser les données et de les nettoyer <br/></p>
+<h3 class="projet" id="Analyse-et-nettoyage-du-dataset">Analyse et nettoyage du dataset<a class="anchor-link" href="#Analyse-et-nettoyage-du-dataset">&#182;</a></h3><p>La première étape est d’analyser les données et de les nettoyer <br/></p>
 
 </div>
 </div>
@@ -13426,7 +13426,7 @@ memory usage: 3.7+ MB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="FEATURES">FEATURES<a class="anchor-link" href="#FEATURES">&#182;</a></h4><ul>
+<h4 class="projet" id="FEATURES">FEATURES<a class="anchor-link" href="#FEATURES">&#182;</a></h4><ul>
 <li>'age',</li>
 <li>'workclass': Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.</li>
 <li>'fnlwgt': continuous.</li>
@@ -13442,7 +13442,7 @@ memory usage: 3.7+ MB
 <li>'hours-per-week': continuous.</li>
 <li>'native-country': United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&amp;Tobago, Peru, Hong, Holand-Netherlands.</li>
 </ul>
-<h4 id="TARGET">TARGET<a class="anchor-link" href="#TARGET">&#182;</a></h4><ul>
+<h4 class="projet" id="TARGET">TARGET<a class="anchor-link" href="#TARGET">&#182;</a></h4><ul>
 <li>'income' : &gt;50K, &lt;=50K</li>
 </ul>
 
@@ -13464,7 +13464,7 @@ memory usage: 3.7+ MB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlation-des-valeurs-num&#233;riques">Correlation des valeurs num&#233;riques<a class="anchor-link" href="#Correlation-des-valeurs-num&#233;riques">&#182;</a></h3><p>Pour supprimer d'éventuelles colonnes qui auraient un effet sur le modèle.</p>
+<h3 class="projet" id="Correlation-des-valeurs-num&#233;riques">Correlation des valeurs num&#233;riques<a class="anchor-link" href="#Correlation-des-valeurs-num&#233;riques">&#182;</a></h3><p>Pour supprimer d'éventuelles colonnes qui auraient un effet sur le modèle.</p>
 
 </div>
 </div>
@@ -13525,7 +13525,7 @@ memory usage: 3.7+ MB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="La-variable-&quot;native-country&quot;">La variable "native-country"<a class="anchor-link" href="#La-variable-&quot;native-country&quot;">&#182;</a></h3>
+<h3 class="projet" id="La-variable-&quot;native-country&quot;">La variable "native-country"<a class="anchor-link" href="#La-variable-&quot;native-country&quot;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14051,7 +14051,7 @@ Name: group_country, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="La-variable-:-Income">La variable : Income<a class="anchor-link" href="#La-variable-:-Income">&#182;</a></h3><p>Je regarde la distribution de la Target.</p>
+<h3 class="projet" id="La-variable-:-Income">La variable : Income<a class="anchor-link" href="#La-variable-:-Income">&#182;</a></h3><p>Je regarde la distribution de la Target.</p>
 
 </div>
 </div>
@@ -14355,7 +14355,7 @@ Name: income_ordinal, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Les-valeurs-manquantes">Les valeurs manquantes<a class="anchor-link" href="#Les-valeurs-manquantes">&#182;</a></h3>
+<h3 class="projet" id="Les-valeurs-manquantes">Les valeurs manquantes<a class="anchor-link" href="#Les-valeurs-manquantes">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14411,7 +14411,7 @@ Name: income_ordinal, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ML">ML<a class="anchor-link" href="#ML">&#182;</a></h2>
+<h2 class="projet" id="ML">Machine Learning <a class="anchor-link" href="#ML">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14649,7 +14649,7 @@ Name: income_ordinal, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Split-des-donn&#233;es-en-training-(80%)-et-testing-(20%)-.">1. Split des donn&#233;es en training (80%) et testing (20%) .<a class="anchor-link" href="#1.-Split-des-donn&#233;es-en-training-(80%)-et-testing-(20%)-.">&#182;</a></h3><p>Je réalise un split classique de type 80% pour le training et 20% pour le test.</p>
+<h3 class="projet" id="1.-Split-des-donn&#233;es-en-training-(80%)-et-testing-(20%)-.">1. Split des donn&#233;es en training (80%) et testing (20%) .<a class="anchor-link" href="#1.-Split-des-donn&#233;es-en-training-(80%)-et-testing-(20%)-.">&#182;</a></h3><p>Je réalise un split classique de type 80% pour le training et 20% pour le test.</p>
 
 </div>
 </div>
@@ -14694,7 +14694,7 @@ Name: income_ordinal, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-S&#233;lection-du-mod&#232;le-via-la-Cross-Validation">2. S&#233;lection du mod&#232;le via la Cross-Validation<a class="anchor-link" href="#2.-S&#233;lection-du-mod&#232;le-via-la-Cross-Validation">&#182;</a></h2><p>Je décide de passer par la méthode de cross-validation pour choisir mon modèle de prédiction. <br/></p>
+<h3 class="projet" id="2.-S&#233;lection-du-mod&#232;le-via-la-Cross-Validation">2. S&#233;lection du mod&#232;le via la Cross-Validation<a class="anchor-link" href="#2.-S&#233;lection-du-mod&#232;le-via-la-Cross-Validation">&#182;</a></h2><p>Je décide de passer par la méthode de cross-validation pour choisir mon modèle de prédiction. <br/></p>
 <p>La validation croisée en français est une méthode qui permet d'estimer les performances de généralisation de plusieurs modèles à partir de l’ensemble d’apprentissage. Cette estimation pourra être comparée à l’estimation obtenue sur l’ensemble de test mis de côté au départ. <br/></p>
 <p>La cross validation consiste à recommencer sur plusieurs découpages train/test différents du jeu de données initial de manière à s’assurer que la prédiction est stable et éviter d'overfitting.</p>
 
@@ -14836,7 +14836,7 @@ Accuracy of Decision Tree is:  81.22107018316989
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="grid-search">grid search<a class="anchor-link" href="#grid-search">&#182;</a></h2>
+<h3 class="projet" id="grid-search">grid search<a class="anchor-link" href="#grid-search">&#182;</a></h2>
 <pre><code>1) established the parameters to gris-search. it is important  to note that these parameters change depending on what type of model we are building. Be sure to look up the model specific documentation for parameter explanation.
 2) Running the grid search. this step may take a long time to run depending on the data and number of parameters.
 3) Setting up the grid-serach. note how the parameter are wrapped within a dictionary
@@ -15237,7 +15237,7 @@ Accuracy of Decision Tree is:  85.5003499642416
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Travail-avec-le-mod&#232;le-de-Decision-Tree">3. Travail avec le mod&#232;le de <code>Decision Tree</code><a class="anchor-link" href="#3.-Travail-avec-le-mod&#232;le-de-Decision-Tree">&#182;</a></h2><h3 id="Je-travaille-avec-le-mod&#232;le-retenu-par-la-cross-validation-:-Decision-tree-en-int&#233;grant-les-param&#232;tres-retenus-par-la-m&#233;thode-du-Grid-search.">Je travaille avec le mod&#232;le retenu par la cross validation : Decision tree en int&#233;grant les param&#232;tres retenus par la m&#233;thode du Grid-search.<a class="anchor-link" href="#Je-travaille-avec-le-mod&#232;le-retenu-par-la-cross-validation-:-Decision-tree-en-int&#233;grant-les-param&#232;tres-retenus-par-la-m&#233;thode-du-Grid-search.">&#182;</a></h3>
+<h3 class="projet" id="3.-Travail-avec-le-mod&#232;le-de-Decision-Tree">3. Travail avec le mod&#232;le de <code>Decision Tree</code><a class="anchor-link" href="#3.-Travail-avec-le-mod&#232;le-de-Decision-Tree">&#182;</a></h3><b id="Je-travaille-avec-le-mod&#232;le-retenu-par-la-cross-validation-:-Decision-tree-en-int&#233;grant-les-param&#232;tres-retenus-par-la-m&#233;thode-du-Grid-search.">Je travaille avec le mod&#232;le retenu par la cross validation : Decision tree en int&#233;grant les param&#232;tres retenus par la m&#233;thode du Grid-search.<a class="anchor-link" href="#Je-travaille-avec-le-mod&#232;le-retenu-par-la-cross-validation-:-Decision-tree-en-int&#233;grant-les-param&#232;tres-retenus-par-la-m&#233;thode-du-Grid-search.">&#182;</a></b>
 </div>
 </div>
 </div>

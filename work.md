@@ -18,11 +18,11 @@ image: pic02.jpg
 				<tr>
 					<td>Machine Learning: Apprentissage Supervisé</td>
 					<td> Classification des habitants aux Etats-Unis suivant leur revenu annulel </td>
-					<td><a href="docs/supervised_learning project_nov19.pdf" target="blank">Presentation</a><a href="docs/Supervised-learning-project-clean.html" target="blank">Code</a></td>
+					<td><a href="docs/supervised_learning project_nov19.pdf" target="blank">Presentation</a><br/><a href="docs/Supervised-learning-project-clean.html" target="blank">Code</a></td>
 				</tr>
         <tr>
 					<td>Web Scraping</td>
-					<td>Création d'un aggrégateur d'articles : pour un mot donnée, scrapping d'articles issus des pages de résultats de recherche de deux sites</td>
+					<td>Création d'un aggrégateur d'articles : pour un mot donnée, scrapping d'articles issus des pages de résultats de recherche de deux médias</td>
 					<td><a href="docs/projet_web_scrap_final.html" target="blank">Go</a></td>
 				</tr>
 				<tr>
