@@ -22,7 +22,7 @@ title: contact
 		<li><input type="reset" value="Reset" /></li>
 	</ul>
 </form>
-<ul class="icons">
+<!-- ul class="icons">
 
 				{% if site.linkedin_url %}
 				<li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
@@ -52,4 +52,4 @@ title: contact
 				<li><a href="{{ site.slack_url }}" class="icon fa-slack" target="_blank"><span class="label">Slack</span></a></li>
 				{% endif %}
 
-</ul>
+</ul-->
