@@ -492,67 +492,7 @@
 
 /* Form */
 
-	/*form {
-		margin: 20 20 _size(element-margin) 20;
 
-		> :last-child {
-			margin-bottom: 0;
-		}
-
-		> .fields  {
-			$gutter: (_size(element-margin) * 0.75);
-
-			@include vendor('display', 'flex');
-			@include vendor('flex-wrap', 'wrap');
-			width: calc(100% + #{$gutter * 2});
-			margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
-
-			> .field {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
-				padding: $gutter 0 0 $gutter;
-				width: calc(100% - #{$gutter * 1});
-
-				&.half {
-					width: calc(50% - #{$gutter * 0.5});
-				}
-
-				&.third {
-					width: calc(#{100% / 3} - #{$gutter * (1 / 3)});
-				}
-
-				&.quarter {
-					width: calc(25% - #{$gutter * 0.25});
-				}
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			> .fields {
-				$gutter: (_size(element-margin) * 0.75);
-
-				width: calc(100% + #{$gutter * 2});
-				margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
-
-				> .field {
-					padding: $gutter 0 0 $gutter;
-					width: calc(100% - #{$gutter * 1});
-
-					&.half {
-						width: calc(100% - #{$gutter * 1});
-					}
-
-					&.third {
-						width: calc(100% - #{$gutter * 1});
-					}
-
-					&.quarter {
-						width: calc(100% - #{$gutter * 1});
-					}
-				}
-			}
-		}
-	}*/
 
 	label {
 		color: _palette(fg-bold);
@@ -561,7 +501,7 @@
 		font-weight: _font(weight);
 		letter-spacing: _font(letter-spacing);
 		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: 10 0 (_size(element-margin) * 0.5) 0;
 		text-transform: uppercase;
 	}
 
@@ -815,4 +755,30 @@
 	input[type="button"],
 	button {
 		line-height: calc(#{_size(element-height)} - 2px);
+	}
+
+/*LIST*/
+	ul {
+		list-style: disc;
+		margin: 0 0 _size(element-margin) 0;
+		padding-left: 1em;
+
+		li {
+			padding-left: 0.5em;
+		}
+
+		&.alt {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				border-top: solid _size(border-width) _palette(border);
+				padding: 0.5em 0;
+
+				&:first-child {
+					border-top: 0;
+					padding-top: 0;
+				}
+			}
+		}
 	}
