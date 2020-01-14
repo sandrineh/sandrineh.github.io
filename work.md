@@ -38,7 +38,7 @@ image: pic02.jpg
 				<tr>
 					<td>Test</td>
 					<td>Éditeurs et librairies : Prediction de likes</td>
-					<td><a href="predict_form.html" target="blank">Go</a></td>
+					<td><a href="docs/predict_form.html" target="blank">Go</a></td>
 				</tr>
 			</tbody>
 		</table>
