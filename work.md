@@ -20,7 +20,7 @@ image: pic02.jpg
 					<td> Classification des habitants aux Etats-Unis suivant leur revenu annulel </td>
 					<td><a href="docs/supervised_learning project_nov19.pdf" target="blank">Presentation</a><br/><a href="docs/Supervised-learning-project-clean.html" target="blank">Code</a></td>
 				</tr>
-        <tr>
+        		<tr>
 					<td>Web Scraping</td>
 					<td>Création d'un aggrégateur d'articles : pour un mot donnée, scrapping d'articles issus des pages de résultats de recherche de deux médias</td>
 					<td><a href="docs/projet_web_scrap_final.html" target="blank">Go</a></td>
@@ -34,6 +34,11 @@ image: pic02.jpg
 					<td>Datavisualisation</td>
 					<td>Éditeurs et librairies sur les réseaux sociaux en 2017</td>
 					<td><a href="docs/editeurs_librairies_reseaux_sociaux_2017.pdf" target="blank">Go</a></td>
+				</tr>       
+				<tr>
+					<td>Test</td>
+					<td>Éditeurs et librairies : Prediction de likes</td>
+					<td><a href="docs/predict_form.html" target="blank">Go</a></td>
 				</tr>
 			</tbody>
 		</table>
