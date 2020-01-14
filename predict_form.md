@@ -25,9 +25,9 @@ title: prediction
 
 <!--FORMULAIRE PROJET IRONHACK-->
 
-<form action="/result" method="POST">
+<form action="/docs/result" method="POST">
 	<div class="form-group">
-		<label for="publication">Votre publication</label><br>
+		<label for="publication">Votre publication</label>
 		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>	
 	</div>
 	<div class="form-group">
