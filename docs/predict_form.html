@@ -1,13 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
 
-{% extends 'base.html' %}
+	<title>Projet_Web_Scrap_Final</title>
 
-{% block content %}
-  <!-- Header -->
-<header>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<!-- Custom stylesheet, it must be in the same directory as the html file -->
+	<link rel="stylesheet" href="custom.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../assets/css/projet.css" />
+
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+</head>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<span class="icon fa-diamond"></span>
+		</div>
+		<div class="content">
+			<div class="inner">
+    			<h1><a href="https://sandrineh.github.io/">Sandrine Henry</a></h1>
+				<p>Data Science Portfolio</p>
+			</div>
+		</div>
+	</header>
+
+<!-- Main -->
+<div id="main">
     <div class="container" id="maincontent" tabindex="-1">
 		<div class="row">
 			<div class="col-lg-6 ">
-				{% include 'card.html' %}
+				
 
 				<h1 class="name">Prêt-e à connaître le nombre de like </br>de votre prochaine publication ?</h1>
 				<hr class="star-light">
@@ -72,16 +127,7 @@
 			</div>
 		</div>
 	</div>
-</header>
-
- 
-
-{% endblock %}
-
- 	 
-       <!--'publication_polarity', 'publication_subjectivity',
-        'tranche_horaire_0-11',
-       'tranche_horaire_11-15', 'tranche_horaire_15-18',
-       'tranche_horaire_18-23', 'publication_type_GraphImage',
-       'publication_type_GraphSidecar'-->
-
+</div>
+</div>
+</body>
+</html>
