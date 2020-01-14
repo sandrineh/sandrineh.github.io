@@ -16,7 +16,7 @@ title: prediction
 			<label for="message">Message</label>
 			<textarea name="message" id="message" rows="4"></textarea>
 		</div>
-	</div>  
+	</div>
 	<ul class="actions">
 		<li><input type="submit" value="Send Message" class="primary" /></li>
 		<li><input type="reset" value="Reset" /></li>
@@ -25,7 +25,7 @@ title: prediction
 
 <!--FORMULAIRE PROJET IRONHACK-->
 
-<form action="{{ "/docs/result.md" | relative_url }}" method="POST">
+<form action="/docs/result" method="POST">
 	<div class="form-group">
 		<label for="publication">Votre publication</label>
 		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>
