@@ -1,8 +1,78 @@
-<!--{% extends 'base.html' %}
+{% extends 'base.html' %}
 
-{% block content %}-->
+{% block content %}
   <!-- Header -->
-  <p>test</p>
+  <header>
+    <div class="container" id="maincontent" tabindex="-1">
+      
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3" id="text_result">
+          {% include 'card.html' %}
+          <h3>Votre publication :</h3>
+          <h4>{{text}}</h4>
+          
+        </div>
+      </div>
+
+      <div class="row"> <!--class="col-lg-8 col-lg-offset-2 text-center"-->
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Jour de la semaine</th>
+                  <th>Hauteur</th>
+                  <th>Nombre de Hashtag</th>
+                  <th>Nombre de mots</th>
+                  <th>Nombre d'Emoji</th>
+                  <th>Editeur ou Librairie</th>
+                  <th>Polarité</th>
+                  <th>Subjectivité</th>
+                  <th>Nombre de Followers</th>
+                  <th bgcolor="B1E1A7">0_11</th>
+                  <th bgcolor="B1E1A7"> 11_15</th>
+                  <th bgcolor="B1E1A7"> 15_18 </th>
+                  <th bgcolor="B1E1A7">18_23 </th>
+                  <th bgcolor="B1E1A7">Image</th>
+                  <th bgcolor="B1E1A7"> Diaporama</th>
+                  <th bgcolor="B1E1A7">Video</th>
+                  <!--th colspan="5">Heure de publication</th>
+                  <th colspan="3">La publication est : </th-->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{jour}}</td>
+                  <td>{{hauteur}}</td>
+                  <td>{{hashtag}}</td>
+                  <td>{{nb_mots}}</td>
+                  <td>{{emoji}}</td>
+                  <td>{{edi_lib}}</td>
+                  <td>{{polarity}}</td>
+                  <td>{{subjectivity}}</td>
+                  <td>{{nb_followers}}</td>
+                  <td>{{tranche_horaire_0_11}}</td>
+                  <td>{{tranche_horaire_11_15}}</td>
+                  <td>{{tranche_horaire_15_18}}</td>
+                  <td>{{tranche_horaire_18_23}}</td>
+                  <td>{{is_image}}</td>
+                  <td>{{is_diaporama}}</td> 
+                  <td>{{is_video}}</td>                 
+                </tr>
+              </tbody>
+            </table>
+            <!--a class="btn btn-lg btn-outline big-button facebook_button" id="FbShare">
+                Partager sur Facebook
+            </a-->
+        </div>
+
+        <div class="row" id="resultat">
+          <h2>Resultat :</h2>
+          <h3>{{prediction}}</h3>
+      </div>
+
+      </div>
+  </header>
+
+  <div id="fb-root"></div>
   <!--script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -27,4 +97,4 @@
       }, function(response){});
     });
   </script-->
-<!--{% endblock %}-->
+{% endblock %}
