@@ -25,7 +25,7 @@ title: prediction
 
 <!--FORMULAIRE PROJET IRONHACK-->
 
-<form action="/docs/result.html" method="POST">
+<form action="/docs/dataviz-project.html" method="POST">
 	<div class="form-group">
 		<label for="publication">Votre publication</label>
 		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>	
