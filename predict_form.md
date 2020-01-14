@@ -25,7 +25,7 @@ title: prediction
 
 <!--FORMULAIRE PROJET IRONHACK-->
 
-<form action="#" method="POST">
+<form action="https://sandrineh.github.io/docs/result.md" method="POST">
 	<div class="form-group">
 		<label for="publication">Votre publication</label>
 		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>
