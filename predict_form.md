@@ -39,7 +39,7 @@ title: prediction
 			<option value="4">Jeudi</option>
 			<option value="5">Vendredi</option>
 			<option value="6">Samedi</option>
-			<option value="7">Dimanche test</option>
+			<option value="7">Dimanche_test</option>
 		</select>
 	</div>
 	<div class="form-group">
