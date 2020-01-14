@@ -28,7 +28,7 @@ title: prediction
 <form action="/docs/result" method="POST">
 	<div class="form-group">
 		<label for="publication">Votre publication</label>
-		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>	
+		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>
 	</div>
 	<div class="form-group">
 		<label for="code_jour_semaine">Jour de publication </label>
@@ -39,7 +39,7 @@ title: prediction
 			<option value="4">Jeudi</option>
 			<option value="5">Vendredi</option>
 			<option value="6">Samedi</option>
-			<option value="7">Dimanche TEST</option>
+			<option value="7">Diman</option>
 		</select>
 	</div>
 	<div class="form-group">
@@ -56,7 +56,7 @@ title: prediction
 	</div>
 	<div class="form-group">
 		<label for="tranche_horaire">Heure de publication </label>
-		<input type="text"  id="tranche_horaire" name="tranche_horaire" > 
+		<input type="text"  id="tranche_horaire" name="tranche_horaire" >
 	</div>
 	<div class="form-group">
 		<label for="edi_lib">Editeur ou Libraire</label>
