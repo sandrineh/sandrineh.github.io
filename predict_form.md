@@ -23,9 +23,10 @@ title: prediction
 	</ul>
 </form-->
 
+
 <!--FORMULAIRE PROJET IRONHACK-->
 
-<form action="{{ "/docs/result.md" | relative_url }}" method="POST">
+<form action="{{ "/docs/result" | append: ".md"  }}" method="POST">
 	<div class="form-group">
 		<label for="publication">Votre publication</label>
 		<textarea id="publication" name="publication"rows="5" cols="33"></textarea>
