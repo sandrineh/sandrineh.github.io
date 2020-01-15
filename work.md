@@ -17,6 +17,13 @@ image: pic02.jpg
 			<tbody>
 				<tr>
 					<td>Machine Learning: Apprentissage Supervisé</td>
+					<td>Éditeurs et libraires : Prédiction de likes sur Instagram</td>
+					<td><a href="docs/Projet_Ironhack_Final_Janvier_2020.pdf" target="blank"></a>Presentation<br/><a href="https://github.com/sandrineh/data-labs/tree/master/final-project/my-code" target="blank">Code</a></td></td>
+					<td><a href="https://eleonoreh.pythonanywhere.com/" target="blank">Outil de prédictions</a></td>
+					<!--td><a href="docs/predict_form.html" target="blank">Go</a></td-->
+				</tr>				
+				<tr>
+					<td>Machine Learning: Apprentissage Supervisé</td>
 					<td> Classification des habitants aux Etats-Unis suivant leur revenu annulel </td>
 					<td><a href="docs/supervised_learning project_nov19.pdf" target="blank">Presentation</a><br/><a href="docs/Supervised-learning-project-clean.html" target="blank">Code</a></td>
 				</tr>
@@ -35,11 +42,6 @@ image: pic02.jpg
 					<td>Éditeurs et librairies sur les réseaux sociaux en 2017</td>
 					<td><a href="docs/editeurs_librairies_reseaux_sociaux_2017.pdf" target="blank">Go</a></td>
 				</tr>       
-				<tr>
-					<td>Test</td>
-					<td>Éditeurs et librairies : Prediction de likes</td>
-					<td><a href="docs/predict_form.html" target="blank">Go</a></td>
-				</tr>
 			</tbody>
 		</table>
 	</div>
