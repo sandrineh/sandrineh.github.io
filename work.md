@@ -18,8 +18,8 @@ image: pic02.jpg
 				<tr>
 					<td>Machine Learning: Apprentissage Supervisé</td>
 					<td>Éditeurs et libraires : Prédiction de likes sur Instagram</td>
-					<td><a href="docs/Projet_Ironhack_Final_Janvier_2020.pdf" target="blank"></a>Presentation<br/><a href="https://github.com/sandrineh/data-labs/tree/master/final-project/my-code" target="blank">Code</a></td></td>
-					<td><a href="https://eleonoreh.pythonanywhere.com/" target="blank">Outil de prédictions</a></td>
+					<td><a href="docs/Projet_Ironhack_Final_Janvier_2020.pdf" target="blank">Presentation</a><br/><a href="https://github.com/sandrineh/data-labs/tree/master/final-project/my-code" target="blank">Code</a></td></td>
+					<td><a href="https://eleonoreh.pythonanywhere.com/" target="blank">Outil de prédiction</a></td>
 					<!--td><a href="docs/predict_form.html" target="blank">Go</a></td-->
 				</tr>				
 				<tr>
