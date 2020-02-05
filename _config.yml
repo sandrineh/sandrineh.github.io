@@ -2,7 +2,7 @@
 locale: "fr-FR"
 title: "Sandrine Henry"
 email: eleonore.henry@gmail.com
-description: Data Science Portfolio
+description: Data Analyst Portfolio
 baseurl: "/dimension-jekyll-theme" # the subpath of your site, e.g. /blog
 url: "https://sandrineh.github.io" # the base hostname & protocol for your site
 author:
