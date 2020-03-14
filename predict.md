@@ -15,7 +15,7 @@ image: pic02.jpg
 				<form action="/result" method="POST">
 					<div class="form-group">
 						<label for="publication">Votre publication</label><br>
-						<textarea id="publication" name="publication"rows="5" cols="33"></textarea>	
+						<input type="text" id="publication" name="publication"rows="5" cols="33">	
 					</div>
 					<div class="form-group">
 						<label for="code_jour_semaine">Jour de publication </label>
@@ -35,7 +35,7 @@ image: pic02.jpg
 					</div>
 					<div class="form-group">
 						<label for="publication_is">La publication est </label>
-						<select class="custom-select id="publication_is" name="publication_is">
+						<select class="custom-select" id="publication_is" name="publication_is">
 						<option value="0">une image</option>
 						<option value="1">une vidéo</option>
 						<option value="2">un diaporama</option>
