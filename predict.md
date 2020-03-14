@@ -1,5 +1,7 @@
-
-
+---
+title: work
+image: pic02.jpg
+---
 
 <header>
     <div class="container" id="maincontent" tabindex="-1">
