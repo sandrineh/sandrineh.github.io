@@ -7,7 +7,7 @@ image: pic02.jpg
     <div class="container" id="maincontent" tabindex="-1">
 		<div class="row">
 			<div class="col-lg-6 ">
-				<h1 class="name">Prêt-e à connaître le nombre de like </br>de votre prochaine publication ?</h1>
+				<h2 class="name">Prêt-e à connaître le nombre de like de votre prochaine publication ?</h2>
 				<hr class="star-light">
 				<h3> Remplissez le formulaire afin de connaître le résultat !</h3>
 			</div>
@@ -15,7 +15,7 @@ image: pic02.jpg
 				<form action="/result" method="POST">
 					<div class="form-group">
 						<label for="publication">Votre publication</label><br>
-						<input type="text" id="publication" name="publication"rows="5" cols="33">	
+						<input type="text" id="publication" name="publication">	
 					</div>
 					<div class="form-group">
 						<label for="code_jour_semaine">Jour de publication </label>
