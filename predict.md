@@ -1,5 +1,5 @@
 ---
-title: work
+title: prediction
 image: pic02.jpg
 ---
 
