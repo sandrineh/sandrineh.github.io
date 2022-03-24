@@ -17,7 +17,7 @@ Motivée, mon objectif aujourd'hui est de rejoindre une équipe data à forte vo
 <section>
 	<h3 class="major">Download</h3>
 	<ul class="actions">
-		<li><a href="docs/Sandrine_Resume_20.pdf" class="button icon fa-download" target="blank">C.V.</a></li>
+		<li><a href="docs/Sandrine_Resume_21.pdf" class="button icon fa-download" target="blank">C.V.</a></li>
 		<li><a href="docs/Certificate_ironhack_2019-2020.pdf" class="button icon fa-download" target="blank">Certificat</a></li>
 	</ul>
 </section>
